@@ -1,0 +1,5 @@
+logger:
+  level: INFO
+swarm:
+  port:
+    offset: 0

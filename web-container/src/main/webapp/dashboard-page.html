@@ -1,0 +1,10 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <button class="btn btn-success" ng-click="refreshList()">Refresh dashboard list</button>
+    </div>
+    <div class="panel-body">
+        <div ng-repeat="item in items track by item.id">
+            {{item.id}} - {{item.name}}
+        </div>
+    </div>
+</div>

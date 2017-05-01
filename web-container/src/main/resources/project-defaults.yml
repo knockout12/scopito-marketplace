@@ -1,0 +1,12 @@
+logger:
+  level: INFO
+swarm:
+  port:
+    offset: 10
+  datasources:
+    data-sources:
+      MarketplaceDS:
+        driver-name: mysql
+        user-name: webdb
+        password: fut>(L6m8t8Y
+        connection-url: jdbc:mysql://localhost:3306/webdb?autoReconnect=true&useSSL=false&serverTimezone=UTC
