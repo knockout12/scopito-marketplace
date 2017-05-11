@@ -7,6 +7,6 @@ swarm:
     data-sources:
       MarketplaceDS:
         driver-name: mysql
-        user-name: webdb
-        password: fut>(L6m8t8Y
+        user-name: root
+        password: Password1
         connection-url: jdbc:mysql://localhost:3306/webdb?autoReconnect=true&useSSL=false&serverTimezone=UTC

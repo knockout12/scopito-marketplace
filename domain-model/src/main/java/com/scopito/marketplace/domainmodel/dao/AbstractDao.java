@@ -1,5 +1,7 @@
 package com.scopito.marketplace.domainmodel.dao;
 
+import com.scopito.marketplace.domainmodel.model.StatusEntity;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.PersistenceContext;

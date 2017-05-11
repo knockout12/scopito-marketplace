@@ -4,7 +4,7 @@
     </div>
     <div class="panel-body">
         <div ng-repeat="item in items track by item.id">
-            {{item.id}} - {{item.name}}
+            <a href="/details/{{item.id}}">{{item.name}}</a>
         </div>
     </div>
 </div>
