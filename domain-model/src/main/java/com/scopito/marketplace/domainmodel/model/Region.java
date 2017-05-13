@@ -3,7 +3,7 @@ package com.scopito.marketplace.domainmodel.model;
 /**
  * Created by SagiAlagem on 10/05/2017.
  */
-public class region {
+public class Region {
 
     private int regionID;
     private String regionName;

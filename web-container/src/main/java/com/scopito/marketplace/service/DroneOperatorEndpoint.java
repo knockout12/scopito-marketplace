@@ -10,14 +10,14 @@ import com.scopito.marketplace.domainmodel.model.DroneOperatorProfile;
 import com.scopito.marketplace.model.StatusResponse;
 import org.jboss.logging.Logger;
 
-@Path("/dashboard")
+@Path("/DroneOperatorProfile")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public class DashboardEndpoint {
+public class DroneOperatorProfileBean {
     private final Logger logger = Logger.getLogger(getClass());
 
     @Inject
-    private DashboardBean dashboardBean;
+    private DroneOperatorProfileBean droneOperatorProfileBean;
 
     // /service/dashboard/2
     /*@GET
@@ -30,20 +30,6 @@ public class DashboardEndpoint {
     @GET
     public Response getMarketPlaceProfile() {
         logger.info("Requesting to list the first 40 dashboard status entries");
-        return Response.ok(StatusResponse.fromList(DroneOperatorProfileBean.list(0, 40))).build();
-    }
-
-
-    @GET
-    public Response getList(int pageIndex, int pagSize) {
-        logger.info("Requesting to list the first 40 dashboard status entries");
-        return Response.ok(StatusResponse.fromList(dashboardBean.list(pageIndex, pagSize))).build();
-    }
-
-
-    @POST
-    @Consumes(MediaType.MULTIPART_FORM_DATA)
-    public Response upload() {
-        return Response.ok().build();
+        return Response.ok(StatusResponse.fromList(droneOperatorProfileBean.list(0, 40))).build();
     }
 }

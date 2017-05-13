@@ -8,6 +8,14 @@
        <jta-data-source>java:jboss/datasources/MarketplaceDS</jta-data-source>
 
        <class>com.scopito.marketplace.domain.model.entity.Status</class>
+       <class>com.scopito.marketplace.domain.model.country</class>
+       <class>com.scopito.marketplace.domain.model.droneOperatorProfile</class>
+       <class>com.scopito.marketplace.domain.model.location</class>
+       <class>com.scopito.marketplace.domain.model.region</class>
+       <class>com.scopito.marketplace.domain.model.reviews</class>
+       <class>com.scopito.marketplace.domain.model.serviceBacklog</class>
+       <class>com.scopito.marketplace.domain.model.services</class>
+
 
        <!--<exclude-unlisted-classes>true</exclude-unlisted-classes>-->
        <properties>

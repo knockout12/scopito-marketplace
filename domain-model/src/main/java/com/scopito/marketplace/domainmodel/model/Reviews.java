@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Created by SagiAlagem on 10/05/2017.
  */
-public class reviews {
+public class Reviews {
 
     private int reviewItemID;
     private int scopitoID;
@@ -15,7 +15,7 @@ public class reviews {
     private Date created;
 
 
-    private reviews(int reviewItemID, int scopitoID, int authorID, int rating, String comment, Date created)
+    private Reviews(int reviewItemID, int scopitoID, int authorID, int rating, String comment, Date created)
     {
 
     }

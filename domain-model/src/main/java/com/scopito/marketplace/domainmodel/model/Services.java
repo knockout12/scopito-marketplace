@@ -3,24 +3,28 @@ package com.scopito.marketplace.domainmodel.model;
 /**
  * Created by SagiAlagem on 10/05/2017.
  */
-public class serviceBacklog {
+public class Services {
 
+    private int scopitoID;
     private int serviceID;
-    private String serviceName;
-    private String dataType;
+    private String companyName;
+    private double price;
     private String description;
 
+    public int getScopitoID() {
+        return scopitoID;
+    }
 
     public int getServiceID() {
         return serviceID;
     }
 
-    public String getServiceName() {
-        return serviceName;
+    public String getCompanyName() {
+        return companyName;
     }
 
-    public String getDataType() {
-        return dataType;
+    public double getPrice() {
+        return price;
     }
 
     public String getDescription() {
