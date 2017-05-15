@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/lightbox.css">
+    <link type="text/css" href="css/myStylesheet.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="tinymce/js/tinymce/jquery.tinymce.min.js"></script>
+    <script src="tinymce/js/tinymce/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'MyTextarea'});</script>
+</head>
+<body ng-app="scopito.marketplace" ng-strict-di="true">
+<div id="wrapper">
+
+    <!-- Navigation -->
+
+    <div ng-repeat="item in items track by item.id">    </div>
+    <div id="page-wrapper">
+
+        <div class="container-fluid">
+
+            <!-- Page Heading -->
+            <div class="row">
+                <div class="col-lg-12" style="padding-bottom: 2%">
+
+                    <div class="parallax">
+                    </div>
+
+                </div>
+            </div>
+            <!-- /.row -->
+
+
+
+            <div class="row">
+                <div class="col-lg-4 text-center">
+                    <div class=" panel-default">
+                        <div class="panel-body">
+                            <div> <img src="images/droneComp1.jpg" class="img-rounded" style="width: 100%" /></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 text-center ">
+                    <div class=" panel-default companyDivHeaderborder companyInfoTextPadding">
+
+                        <div> Company_Info </div>
+                        <div> Country </div>
+                        <div> Region </div>
+                        <div> Price </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <div class="panel-default companyDivHeaderborder companyInfoTextPadding">
+                        <div> Inc. </div>
+                        <div> Denmark </div>
+                        <div> East Jutland </div>
+                        <div> 500$ </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <div class="panel-default companyDivHeaderborder companyInfoTextPadding">
+                        <div> Favorite </div>
+                        <div> Rating </div>
+                        <div> Certiefied </div>
+                        <div> Contact </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <div class="panel-default companyDivHeaderborder companyInfoTextPadding">
+                        <div> Yes </div>
+                        <div> 9.07 </div>
+                        <div> Yes </div>
+                        <div> mymail@email.com </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- /.row -->
+
+            <div class="row">
+                <div class="col-lg-2 text-center">
+                    <div class=" panel-default companyDivServiceinfoPadding">
+                        <h4>
+                            Services
+                        </h4>
+                        <div> <input type="checkbox" name="vehicle" value="Bike"></div>
+                        <div> <input type="checkbox" name="vehicle" value="Bike"></div>
+                        <div> <input type="checkbox" name="vehicle" value="Bike"></div>
+                        <div> <input type="checkbox" name="vehicle" value="Bike"></div>
+                    </div>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <div class=" panel-default companyDivServiceinfoPadding">
+                        <h4>
+                            <br/>
+                        </h4>
+                        <div>HD_Images </div>
+                        <div>Thermal_Imaging </div>
+                        <div>Analysis </div>
+                        <div>3D_Imaging </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <div class=" panel-default companyDivServiceinfoPadding">
+                        <h4>
+                            Delivery Methods
+                        </h4>
+                        <div> <input type="checkbox" name="vehicle" value="Bike"></div>
+                        <div> <input type="checkbox" name="vehicle" value="Bike"></div>
+                        <div> <input type="checkbox" name="vehicle" value="Bike"></div>
+                        <div> <input type="checkbox" name="vehicle" value="Bike"></div>
+                    </div>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <div class="panel-default companyDivServiceinfoPadding">
+                        <h4>
+                            <br/>
+                        </h4>
+                        <div>HD_Images </div>
+                        <div>Thermal_Imaging </div>
+                        <div>Analysis </div>
+                        <div>3D_Imaging </div>
+                    </div>
+                </div>
+                <!-- Gallery Lightbox plugin container -->
+                <div class="col-lg-4 text-center">
+                    <div class="panel-default">
+                        <div class="panel-body">
+                         <a href="images/droneComp3.jpg" data-title="Test Drone Picture" data-lightbox="Gallery">   <img src="images/droneComp3.jpg" class="img-thumbnail" style="width: 50%"> </img></a>
+                            <a href="images/droneComp1.jpg" data-title="Test Drone Picture" data-lightbox="Gallery"> </a>
+                            <a href="images/droneComp2.jpg" data-title="Test Drone Picture" data-lightbox="Gallery">  </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="panel-default">
+                        <h3 style="float: left"> About the company: </h3>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="panel-default">
+
+                        <div class="panel-body">
+                            <textarea id="MyTextarea" cols=180% rows=15%> About the company is the text that goes here</textarea>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.row -->
+
+            <!-- Make a review -->
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="panel-default">
+                        <h3 style="float: left"> Give a review: </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="panel-default">
+                        <div class="panel-body">
+                            <input type="text" id="ThomasReviewTextSizeAdjust" value="Type text here...">  </input>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <div class="row " id="ThomasborderToCommentSection">
+                <div class="col-lg-3 text-center " id="">
+                    <div class=" panel-default">
+                            <button class="btn btn-primary" style="margin-right: 60%"> Publish </button>
+
+                    </div>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <div class="panel-default">
+                        <div class="panel-body">
+                            <input type="radio" name="rating" value="1" checked> 1
+                            <input type="radio" name="rating" value="2"> 2
+                            <input type="radio" name="rating" value="3"> 3
+                            <input type="radio" name="rating" value="4"> 4
+                            <input type="radio" name="rating" value="5"> 5
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Make a review end -->
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="panel-default">
+                        <h4 style="float: left"> Reviews: </h4>
+
+                    </div>
+                </div>
+            </div>
+            <!-- comment section -->
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="panel-default">
+                        <div class="panel-body">
+                            <textarea cols=220% rows=10% readonly="true"> (5) The company provided very good and clear cut service, and would fullt recommend them for various kinds of roof inspections </textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="panel-default">
+                        <div class="panel-body">
+                            <textarea cols=220% rows=10% readonly="true"> (5) The company provided very good and clear cut service, and would fullt recommend them for various kinds of roof inspections</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="panel-default">
+                        <div class="panel-body">
+                            <textarea cols=220% rows=10% readonly="true"> (5) The company provided very good and clear cut service, and would fullt recommend them for various kinds of roof inspections </textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="panel-default">
+                        <div class="panel-body">
+                            <textarea cols=220% rows=10% readonly="true"> (5) The company provided very good and clear cut service, and would fullt recommend them for various kinds of roof inspections </textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- comment section end-->
+            <!--   <div class="row">
+                   <div class="col-lg-1 text-center">
+                       <div class="panel panel-default">
+                           <div class="panel-body">
+                               .col-lg-1
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-1 text-center">
+                       <div class="panel panel-default">
+                           <div class="panel-body">
+                               .col-lg-1
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-1 text-center">
+                       <div class="panel panel-default">
+                           <div class="panel-body">
+                               .col-lg-1
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-1 text-center">
+                       <div class="panel panel-default">
+                           <div class="panel-body">
+                               .col-lg-1
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-1 text-center">
+                       <div class="panel panel-default">
+                           <div class="panel-body">
+                               .col-lg-1
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-1 text-center">
+                       <div class="panel panel-default">
+                           <div class="panel-body">
+                               .col-lg-1
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-1 text-center">
+                       <div class="panel panel-default">
+                           <div class="panel-body">
+                               .col-lg-1
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-1 text-center">
+                       <div class="panel panel-default">
+                           <div class="panel-body">
+                               .col-lg-1
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-1 text-center">
+                       <div class="panel panel-default">
+                           <div class="panel-body">
+                               .col-lg-1
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-1 text-center">
+                       <div class="panel panel-default">
+                           <div class="panel-body">
+                               .col-lg-1
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-1 text-center">
+                       <div class="panel panel-default">
+                           <div class="panel-body">
+                               .col-lg-1
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-1 text-center">
+                       <div class="panel panel-default">
+                           <div class="panel-body">
+                               .col-lg-1
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <!-- /.row -->
+
+         <!--   <div class="row">
+                <div class="col-lg-8 text-center">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            .col-lg-8
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            .col-lg-4
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+
+         <!--   <div class="row">
+                <div class="col-lg-3 text-center">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            .col-lg-3
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            .col-lg-6
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            .col-lg-3
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- /.row -->
+
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+</div>
+    <!-- ng-view end -->
+
+<!-- /#wrapper -->
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<!-- lightbox gallery script -->
+<script src="js/lightbox.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-route.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.1.3/ui-bootstrap-tpls.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

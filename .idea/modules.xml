@@ -5,11 +5,12 @@
       <module fileurl="file://$PROJECT_DIR$/domain-model/domain-model.iml" filepath="$PROJECT_DIR$/domain-model/domain-model.iml" />
       <module fileurl="file://$PROJECT_DIR$/ejb-dashboard/ejb-dashboard.iml" filepath="$PROJECT_DIR$/ejb-dashboard/ejb-dashboard.iml" />
       <module fileurl="file://$PROJECT_DIR$/ejb-dashboard/src/main/main.iml" filepath="$PROJECT_DIR$/ejb-dashboard/src/main/main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/web-container/src/main/main1.iml" filepath="$PROJECT_DIR$/web-container/src/main/main1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/domain-model/src/main/main2.iml" filepath="$PROJECT_DIR$/domain-model/src/main/main2.iml" />
+      <module fileurl="file://D:\Thomas BackUp\10 Semester\ICT Bachelor\ICT_Website_Work\ICT_Bachelor_WebsiteV2\web-container\src\main\main1.iml" filepath="D:\Thomas BackUp\10 Semester\ICT Bachelor\ICT_Website_Work\ICT_Bachelor_WebsiteV2\web-container\src\main\main1.iml" />
+      <module fileurl="file://D:\Thomas BackUp\10 Semester\ICT Bachelor\ICT_Website_Work\ICT_Bachelor_WebsiteV2\domain-model\src\main\main2.iml" filepath="D:\Thomas BackUp\10 Semester\ICT Bachelor\ICT_Website_Work\ICT_Bachelor_WebsiteV2\domain-model\src\main\main2.iml" />
       <module fileurl="file://$PROJECT_DIR$/scopito-marketplace.iml" filepath="$PROJECT_DIR$/scopito-marketplace.iml" />
-      <module fileurl="file://$PROJECT_DIR$/web-container/swarm-scopito-marketplace.iml" filepath="$PROJECT_DIR$/web-container/swarm-scopito-marketplace.iml" />
+      <module fileurl="file://D:\Thomas BackUp\10 Semester\ICT Bachelor\ICT_Website_Work\ICT_Bachelor_WebsiteV2\web-container\swarm-scopito-marketplace.iml" filepath="D:\Thomas BackUp\10 Semester\ICT Bachelor\ICT_Website_Work\ICT_Bachelor_WebsiteV2\web-container\swarm-scopito-marketplace.iml" />
       <module fileurl="file://$PROJECT_DIR$/web-container/web-container.iml" filepath="$PROJECT_DIR$/web-container/web-container.iml" />
+      <module fileurl="file://D:\Thomas BackUp\10 Semester\ICT Bachelor\ICT_Website_Work\ICT_Bachelor_WebsiteV2\web-container\web-container.iml" filepath="D:\Thomas BackUp\10 Semester\ICT Bachelor\ICT_Website_Work\ICT_Bachelor_WebsiteV2\web-container\web-container.iml" />
     </modules>
   </component>
 </project>

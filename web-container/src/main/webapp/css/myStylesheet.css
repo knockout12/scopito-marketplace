@@ -1,8 +1,6 @@
 .coverimageParagraph
 {
-width: 100%;
-height: 300px;
-overflow: hidden;
+
 
 
 }
@@ -34,4 +32,29 @@ overflow: hidden;
   padding-bottom: 10%;
   font-size: 20px;
   text-align: center;
+}
+
+#ThomasborderToCommentSection
+{
+border-bottom: 1px solid gray;
+}
+
+#ThomasReviewTextSizeAdjust
+{
+width: 100%;
+height: 20px;
+}
+
+.parallax
+{
+ /* The image used */
+
+    background-image: url('../images/droneComp2.jpg');
+    /* Set a specific height */
+    height: 300px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: scrolling;
+    background-position: center;
+    background-size: cover;
 }
