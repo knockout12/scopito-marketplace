@@ -4,12 +4,11 @@ import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import com.scopito.marketplace.;
-import com.scopito.marketplace.domainmodel.model.DroneOperatorProfile;
 import com.scopito.marketplace.model.ProfileResponse;
+import ejb-controller.marketplace.DroneOperatorProfileBean;
 import org.jboss.logging.Logger;
 
-@Path("/profile")
+@Path("service/profile")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class DroneOperatorProfileBean {
@@ -29,6 +28,6 @@ public class DroneOperatorProfileBean {
     @GET
     public Response getList() {
         logger.info("Requesting to list the first 40 dashboard status entries");
-        return Response.ok(ProfileResponse.fromList(droneOperatorProfileBean.list(0, 40))).build();
+        return Response.ok(ProfileResponse.fromList(a.list(0, 40))).build();
     }
 }
