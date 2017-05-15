@@ -1,39 +1,40 @@
+package com.scopito.marketplace.model;
 import com.scopito.marketplace.domainmodel.model.DroneOperatorProfile;
 import java.util.ArrayList;
-import java.util.List;package com.scopito.marketplace.model;
-import com.scopito.marketplace.domainmodel.model.StatusEntity;
-import java.util.ArrayList;
 import java.util.List;
+
 /**
  * Created by SagiAlagem on 13/05/2017.
  */
 
-public class ProfileResponse {
-    private long id;
-    private String name;
+public class ProfileResponse
+{
+    private int scopitoID;
+    private boolean published;
+    private String companyName;
+    private boolean scopitoCertified;
+    private String email;
+    private String phoneNumber;
 
     ProfileResponse(DroneOperatorProfile droneOperatorProfile) {
-        name = droneOperatorProfile.getName();
-        id = droneOperatorProfile.getId();
+        scopitoID = droneOperatorProfile.getID();
+        published = droneOperatorProfile.isPublished();
+        companyName = droneOperatorProfile.getCompanyName();
+        scopitoCertified =droneOperatorProfile.isScopitoCertified();
+        email = droneOperatorProfile.getEmail();
+        phoneNumber = droneOperatorProfile.getPhoneNumber();
+
     }
 
-    public static List<StatusResponse> fromList(List<StatusEntity> list) {
-        List<StatusResponse> result = new ArrayList<StatusResponse>();
+    public static List<ProfileResponse> fromList(List<DroneOperatorProfile> list) {
+        List<ProfileResponse> result = new ArrayList<ProfileResponse>();
 
-        for (StatusEntity statusEntity : list) {
-            result.add(new StatusResponse(statusEntity));
+        for (DroneOperatorProfile droneOperatorProfile : list) {
+            result.add(new ProfileResponse(droneOperatorProfile));
         }
-
 
         return result;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public long getId() {
-        return id;
-    }
 }
 

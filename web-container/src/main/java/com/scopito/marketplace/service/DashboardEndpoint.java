@@ -6,9 +6,9 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import com.scopito.marketplace.DashboardBean;
-import com.scopito.marketplace.domainmodel.model.DroneOperatorProfile;
 import com.scopito.marketplace.model.StatusResponse;
 import org.jboss.logging.Logger;
+import static com.scopito.marketplace.model.StatusResponse.fromList;
 
 @Path("/dashboard")
 @Consumes(MediaType.APPLICATION_JSON)
@@ -28,22 +28,19 @@ public class DashboardEndpoint {
     }*/
 
     @GET
-    public Response getMarketPlaceProfile() {
+    public Response getList() {
         logger.info("Requesting to list the first 40 dashboard status entries");
-        return Response.ok(StatusResponse.fromList(DroneOperatorProfileBean.list(0, 40))).build();
+        return Response.ok(fromList(dashboardBean.list(0, 40))).build();
     }
+
 
 
     @GET
     public Response getList(int pageIndex, int pagSize) {
         logger.info("Requesting to list the first 40 dashboard status entries");
-        return Response.ok(StatusResponse.fromList(dashboardBean.list(pageIndex, pagSize))).build();
+        return Response.ok(fromList(dashboardBean.list(pageIndex, pagSize))).build();
     }
 
 
-    @POST
-    @Consumes(MediaType.MULTIPART_FORM_DATA)
-    public Response upload() {
-        return Response.ok().build();
-    }
+
 }

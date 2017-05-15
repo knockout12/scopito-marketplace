@@ -1,7 +1,7 @@
 package com.scopito.marketplace;
 
-import com.scopito.marketplace.domainmodel.dao.Status;
-import com.scopito.marketplace.domainmodel.model.StatusEntity;
+import com.scopito.marketplace.domainmodel.dao.profileInfo;
+import com.scopito.marketplace.domainmodel.model.DroneOperatorProfile;
 import org.jboss.logging.Logger;
 
 import javax.ejb.Stateless;
@@ -9,7 +9,7 @@ import javax.inject.Inject;
 import java.util.List;
 
 @Stateless
-public class DroneOperatorProfile {
+public class DroneOperatorProfileBean {
     private final Logger logger = Logger.getLogger(getClass());
 
     @Inject
@@ -19,7 +19,7 @@ public class DroneOperatorProfile {
         return profileInfo.count();
     }
 
-    public List<droneOperatorProfile> list(int pageCount, int pageSize) {
+    public List<DroneOperatorProfile> list(int pageCount, int pageSize) {
         logger.info(String.format("List rage from page '%d' with max size '%d'", pageCount, pageSize));
         return ProfileInfo.listRange(pageCount, pageSize);
     }
@@ -29,9 +29,9 @@ public class DroneOperatorProfile {
             return false;
         }
 
-        final droneOperatorProfile droneOperatorProfile = new droneOperatorProfile();
+        final DroneOperatorProfile droneOperatorProfile = new DroneOperatorProfileBean();
         droneOperatorProfile.setName(name);
 
-        return ProfileInfo.create(statusEntity) != null;
+        return ProfileInfo.create(droneOperatorProfile) != null;
     }
 }
