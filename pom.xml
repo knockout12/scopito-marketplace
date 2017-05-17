@@ -33,7 +33,7 @@
 
     <modules>
         <module>domain-model</module>
-        <module>ejb-dashboard</module>
+        <module>ejb-controller</module>
         <module>web-container</module>
     </modules>
 </project>

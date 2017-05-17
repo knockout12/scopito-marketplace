@@ -1,56 +1,48 @@
 package com.scopito.marketplace.domainmodel.model;
 
-/**
- * Created by SagiAlagem on 15/05/2017.
- */
-
 import javax.persistence.*;
 
 @Entity
 @Table(name = "DroneOperatorProfile")
 @NamedQueries({
-   /*     @NamedQuery(name="FindDroneOperatorProfileByID", query = "FROM DroneOperatorProfile s where s.scopitoID = :scopitoID"),*/
-        @NamedQuery(name ="DroneOperators.FindAll", query = "SELECT s FROM DroneOperatorProfile")
+        @NamedQuery(name="DroneOperatorProfile.findByID", query = "SELECT s FROM DroneOperatorProfileEntity s where s.scopitoID = :scopitoID"),
+        @NamedQuery(name ="DroneOperatorProfile.findAll", query = "SELECT s FROM DroneOperatorProfileEntity s")
 })
-
 public class DroneOperatorProfileEntity {
-
-
-    private int scopitoID;
-    private boolean published;
+    private long scopitoID;
+    private Boolean published;
     private String companyName;
-    private boolean scopitoCertified;
+    private Boolean scopitoCertified;
     private String email;
     private String phoneNumber;
-
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name = "scopitoID")
-    public int getScopitoID() {
+    public long getScopitoID() {
         return scopitoID;
     }
-    public void setScopitoID(int scopitoID) {
+    public void setScopitoID(long scopitoID) {
         this.scopitoID = scopitoID;
     }
 
-    @Column(columnDefinition = "boolean", name = "published")
-    public boolean isPublished() {return this.published; }
-    public void setPublished(boolean published) { this.published = published;}
+    @Column(name = "published")
+    public Boolean isPublished() {return this.published; }
+    public void setPublished(Boolean published) { this.published = published;}
 
     @Column(name = "companyName")
     public String getCompanyName() {return this.companyName; }
     public void setCompanyName(String companyName) { this.companyName = companyName;}
 
-    @Column(columnDefinition = "boolean", name = "scopitoCertified")
-    public boolean isScopitoCertified() {return this.scopitoCertified; }
-    public void setScopitoCertified(boolean certified) { this.scopitoCertified = certified;}
+    @Column(name = "scopitoCertified")
+    public Boolean isScopitoCertified() {return this.scopitoCertified; }
+    public void setScopitoCertified(Boolean certified) { this.scopitoCertified = certified;}
 
     @Column(name = "email")
     public String getEmail() {return this.email;}
     public void setEmail(String email) { this.email = email;}
 
-    @Column(name = "email")
+    @Column(name = "phoneNumber")
     public String getPhoneNumber() {return this.phoneNumber;}
     public void setPhoneNumber(String phoneNumber) { this.phoneNumber = phoneNumber;}
 }

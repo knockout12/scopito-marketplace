@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="domain-model" />
+        <module name="ejb-controller" />
         <module name="ejb-dashboard" />
         <module name="swarm-scopito-marketplace" />
         <module name="web-container" />
@@ -14,6 +15,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="domain-model" target="1.8" />
+      <module name="ejb-controller" target="1.8" />
       <module name="ejb-dashboard" target="1.8" />
       <module name="scopito-marketplace" target="1.8" />
       <module name="swarm-scopito-marketplace" target="1.8" />
