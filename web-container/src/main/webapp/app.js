@@ -2,7 +2,7 @@ angular.module('scopito.marketplace', ['ngRoute'])
 .config(['$routeProvider', function($routeProvider) {
 	$routeProvider
 		.otherwise({redirectTo:  '/'})
-		.when('/', {templateUrl: 'dashboard-page.html', controller: 'DashboardPageCtrl', reloadOnSearch: false});
+		.when('/', {templateUrl: 'templates/navigation.html', controller: 'DashboardPageCtrl', reloadOnSearch: false});
 }])
 .service('DashboardService', ['$http', function($http) {
     var service = {};
