@@ -1,37 +1,38 @@
 package com.scopito.marketplace;
 
 import javax.ejb.Stateless;
-import com.scopito.marketplace.domainmodel.dao.ServicesView;
-import com.scopito.marketplace.domainmodel.model.ServicesViewEntity;
+import com.scopito.marketplace.domainmodel.dao.Services;
+import com.scopito.marketplace.domainmodel.model.ServicesEntity;
 import org.jboss.logging.Logger;
 import javax.inject.Inject;
 import java.util.List;
 
 @Stateless
-public class ServicesViewBean {
+public class ServicesBean {
     private final Logger logger = Logger.getLogger(getClass());
 
     @Inject
-    private ServicesView servicesView;
+    private Services services;
 
     public Long countAll() {
-        return servicesView.count();
+        return services.count();
     }
 
-    public List<ServicesViewEntity> list(int pageCount, int pageSize) {
+    public List<ServicesEntity> list(int pageCount, int pageSize) {
         logger.info(String.format("List rage from page '%d' with max size '%d'", pageCount, pageSize));
-        return servicesView.getEntityManager().createQuery("SELECT s FROM ServicesViewEntity s", ServicesViewEntity.class).getResultList();
+        return services.getEntityManager().createQuery("SELECT s FROM ServicesEntity s", ServicesEntity.class).getResultList();
         //return droneOperatorProfile.listRange(pageCount, pageSize);
     }
 
     public boolean create(Double price) {
-        final ServicesViewEntity servicesViewEntity = new ServicesViewEntity();
-        servicesViewEntity.setServicePrice(price);
-        return servicesView.create(servicesViewEntity) != null;
+        final ServicesEntity servicesEntity = new ServicesEntity();
+        servicesEntity.setServicePrice(price);
+        return services.create(servicesEntity) != null;
     }
 
-    public ServicesViewEntity getServicesByID(long scopitoID) {
-        return servicesView.getServicesByID(scopitoID);
+    public List<ServicesEntity> getServicesByID(long scopitoID) {
+        return services.getEntityManager().createQuery("SELECT s FROM ServicesEntity s where s.scopitoID = :scopitoID", ServicesEntity.class)
+                .setParameter("scopitoID", scopitoID).getResultList();
     }
 }
 

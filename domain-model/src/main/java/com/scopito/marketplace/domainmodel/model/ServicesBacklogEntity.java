@@ -2,16 +2,10 @@ package com.scopito.marketplace.domainmodel.model;
 
 import javax.persistence.*;
 
-/**
- * Created by SagiAlagem on 15/05/2017.
- */
-@Entity
-@Table(name = "ServiceBacklog")
-@NamedQueries({
-        @NamedQuery(name="ServiceBacklog.findAll", query = "SELECT s FROM ServiceBacklog")
-})
-public class ServicesBacklogEntity{
 
+
+public class ServicesBacklogEntity{
+/*
     private int serviceID;
     private String serviceName;
     private String description;
@@ -30,6 +24,7 @@ public class ServicesBacklogEntity{
     @Column(columnDefinition = "description", name = "description")
     public String getDescription() {return this.description; }
     public void setDescription(String description) { this.description = description;}
+*/
 
 }
 

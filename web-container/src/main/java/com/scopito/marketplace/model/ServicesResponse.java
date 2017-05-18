@@ -1,37 +1,38 @@
 package com.scopito.marketplace.model;
-import com.scopito.marketplace.domainmodel.model.ServicesViewEntity;
+import com.scopito.marketplace.domainmodel.model.ServicesEntity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class ServicesViewResponse {
+public class ServicesResponse implements Serializable {
     private long scopitoID;
     private int serviceID;
-    private String serviceName;
     private Double price;
+    private String description;
 
-    ServicesViewResponse(ServicesViewEntity servicesViewEntity)
+    ServicesResponse(ServicesEntity servicesEntity)
     {
-        scopitoID = servicesViewEntity.getScopitoID();
-        serviceID = servicesViewEntity.getServiceID();
-        serviceName = servicesViewEntity.getServiceName();
-        price = servicesViewEntity.getServicePrice();
+        scopitoID = servicesEntity.getScopitoID();
+        serviceID = servicesEntity.getServiceID();
+        price = servicesEntity.getServicePrice();
+        description = servicesEntity.getDescription();
     }
 
-    public static List<ServicesViewResponse> fromList(List<ServicesViewEntity> list) {
-        List<ServicesViewResponse> result = new ArrayList<ServicesViewResponse>();
+    public static List<ServicesResponse> fromList(List<ServicesEntity> list) {
+        List<ServicesResponse> result = new ArrayList<ServicesResponse>();
 
-        for (ServicesViewEntity servicesViewEntity : list) {
-            result.add(new ServicesViewResponse(servicesViewEntity));
+        for (ServicesEntity servicesEntity : list) {
+            result.add(new ServicesResponse(servicesEntity));
         }
 
         return result;
     }
 
-    public static ServicesViewResponse getServicesByID(ServicesViewEntity servicesViewEntity)
+    public static ServicesResponse getServicesByID(ServicesEntity servicesEntity)
     {
-        return new ServicesViewResponse(servicesViewEntity);
+        return new ServicesResponse(servicesEntity);
     }
 
 }

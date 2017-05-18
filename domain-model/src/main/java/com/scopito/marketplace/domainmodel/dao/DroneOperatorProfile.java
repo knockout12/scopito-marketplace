@@ -27,7 +27,7 @@ public class DroneOperatorProfile extends AbstractDao<DroneOperatorProfileEntity
     }
 
     public List<DroneOperatorProfileEntity> listRange(int pageCount, int pageSize) {
-        logger.info("Reading range from named query 'StatusEntity.findAll'");
+        logger.info("Reading range from named query 'DroneOperatorProfile.findAll'");
         return listAllRange("DroneOperatorProfile.findAll", pageCount, pageSize);
     }
 }
