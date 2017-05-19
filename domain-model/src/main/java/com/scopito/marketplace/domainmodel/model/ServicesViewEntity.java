@@ -1,21 +1,17 @@
 package com.scopito.marketplace.domainmodel.model;
 
+import javax.persistence.*;
+import java.io.Serializable;
+
+
+
+
 public class ServicesViewEntity {
 /*
-    private long scopitoID;
     private int serviceID;
     private String serviceName;
-    private Double price;
+    private String description;
 
-
-    @Id
-    @Column(name = "scopitoID")
-    public long getScopitoID() {
-        return scopitoID;
-    }
-    public void setScopitoID(long scopitoID) {
-        this.scopitoID = scopitoID;
-    }
 
     @Id
     @Column(name = "serviceID")
@@ -26,11 +22,9 @@ public class ServicesViewEntity {
     public String getServiceName() {return this.serviceName; }
     public void setServiceID(String serviceName) { this.serviceName = serviceName;}
 
-    @Column(name = "serviceName")
-    public Double getServicePrice() {return this.price; }
+    @Column(name = "description")
+    public String getServicePrice() {return this.price; }
     public void setServicePrice(Double price) { this.price = price;}
-
-
 */
 
 }

@@ -2,6 +2,8 @@ package com.scopito.marketplace;
 
 import javax.ejb.Stateless;
 import com.scopito.marketplace.domainmodel.dao.Services;
+import com.scopito.marketplace.domainmodel.dao.ServicesBacklog;
+import com.scopito.marketplace.domainmodel.model.ServicesBacklogEntity;
 import com.scopito.marketplace.domainmodel.model.ServicesEntity;
 import org.jboss.logging.Logger;
 import javax.inject.Inject;
@@ -34,6 +36,16 @@ public class ServicesBean {
         return services.getEntityManager().createQuery("SELECT s FROM ServicesEntity s where s.scopitoID = :scopitoID", ServicesEntity.class)
                 .setParameter("scopitoID", scopitoID).getResultList();
     }
+/*
+    private ServicesBacklog servicesBacklog;
+
+
+    public List<ServicesBacklogEntity> listServices() {
+        return servicesBacklog.getEntityManager().createQuery("SELECT s FROM ServicesBacklogEntity s", ServicesBacklogEntity.class).getResultList();
+
+    }
+*/
+
 }
 
 
