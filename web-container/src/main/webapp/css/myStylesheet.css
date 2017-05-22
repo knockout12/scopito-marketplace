@@ -1,9 +1,3 @@
-.coverimageParagraph
-{
-
-
-
-}
 
 .myNavBarFontColor
 {
@@ -57,4 +51,8 @@ height: 20px;
     background-attachment: scrolling;
     background-position: center;
     background-size: cover;
+}
+
+#navigation .nav > li > a:hover{
+    background-color: transparent !important;
 }

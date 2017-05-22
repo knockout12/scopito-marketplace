@@ -1,3 +1,4 @@
+//The ngRoute module provides routing and deeplinking services and directives for AngularJS apps.
 var app = angular.module('scopito.marketplace', ['ngRoute']);
 
 app.config(['$routeProvider', function ($routeProvider) {
