@@ -1,0 +1,187 @@
+<!-- Search bar -->
+<div id="search-bar" name="search-bar" class="container-fluid">
+    <h1 class="text-center">Title placeholder</h1>
+    <div class="row">
+        <div class="col-lg-4 text-center">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form>
+                        <div class="input-group">
+                            <input id="search" class="form-control" type="text" placeholder="Search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 text-center">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <label class="checkbox-inline"><input type="checkbox" value="" data-toggle="toggle"><strong>Only
+                        Favorites</strong></label>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 text-center">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <label class="checkbox-inline"><input type="checkbox" value="" data-toggle="toggle"><strong>Only
+                        Scopito Certified</strong></label>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 text-center">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 text-center">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Search bar -->
+    <!-- Collapsible search options -->
+    <div id="advanced-search" class="row" ng-show="collapsed">
+        <div class="col-lg-3 text-center">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p class="lead underline">Services</p>
+                    <form>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Option 1</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Option 2</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Option 3</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Option 4</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Option 5</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Option 6</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 text-center">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p class="lead underline">Delivery Method</p>
+                    <form>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Option 1</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Option 2</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Option 3</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Option 4</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Option 5</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Option 6</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 text-center">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p class="lead underline">Location</p>
+                    <div class="form-group">
+                        <label for="country">Country:</label>
+                        <select class="form-control" id="country">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City:</label>
+                        <select class="form-control" id="city">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 text-center">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p class="lead underline">Other Options</p>
+                    <form>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Option 1</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Option 2</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Option 3</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Option 4</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Option 5</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Option 6</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 text-center"><button id="filter-btn" class="btn btn-default btn-lg">Filter</button></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Collapsible search options -->
+<!-- Collapsible search btn -->
+<div id="collapsible-search-btn" class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <div class="panel panel-default" style="margin-bottom:0">
+                <div class="panel-body">
+                    <a href="" ng-model="collapsed" ng-click="collapsed=!collapsed ; down=!down"><span id="chevrondown" ng-show="!down" class="glyphicon glyphicon-chevron-right rotate-90"></span>
+                        <span id="chevronup" ng-show="down" class="glyphicon glyphicon-chevron-right rotate-minus-90"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Collapsible search btn -->
+

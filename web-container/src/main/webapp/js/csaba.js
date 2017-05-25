@@ -8,9 +8,9 @@ jQuery(document).ready(function(){
         jQuery("#list-btn").removeClass("active");
         jQuery("#list-view").hide();
         jQuery("#grid-view").show();
-        jQuery("#welcome-modal").modal;
+        jQuery("#welcome-modal").modal("show");
 
-    })
+    });
 
 
 
