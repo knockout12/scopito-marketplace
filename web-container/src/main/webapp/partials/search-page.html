@@ -24,11 +24,12 @@
                 </div>
             </div>
             <div id="view-btns" class="col-lg-2 text-center">
+                <a id="lol" class="btn btn-primary btn-md" ng-click="show()"><span class="glyphicon glyphicon-list"></span></a>
                 <a href="" id="grid-btn" class="btn btn-primary btn-md" data-toggle="tooltip" title="Grid View" ng-class="{active: layout == 'grid'}" ng-click="layout = 'grid'" ><span class="glyphicon glyphicon-th"></span></a>
                 <a href="" id="list-btn" class="btn btn-primary btn-md" data-toggle="tooltip" title="List View" ng-class="{active: layout == 'list'}" ng-click="layout = 'list'" ><span class="glyphicon glyphicon-list"></span></a>
             </div>
         </div>
-        <div class="divider" ng-click="show()" ></div> <!-- ng-init="showModal()" -->
+        <div class="divider"></div> <!-- ng-init="showModal()" -->
         <!-- Grid and List View -->
             <div ng-show="layout == 'grid'">
                 <div ng-include="'partials/search-grid.html'"></div>

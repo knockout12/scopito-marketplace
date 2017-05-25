@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-var app = angular.module('scopito.marketplace', ['ngRoute' , 'angular-lightbox' ,/* 'angularModalService'  , 'ngMaterial' , 'ngMessages' , 'material.svgAssetsCache' */ ]); /* Dependencies for fiddles */
-=======
+var app = angular.module('scopito.marketplace', ['ngRoute' , 'angular-lightbox' , 'angularModalService' /* , 'ngMaterial' , 'ngMessages' , 'material.svgAssetsCache' */ ]); /* Dependencies for fiddles */
 //The ngRoute module provides routing and deeplinking services and directives for AngularJS apps.
-var app = angular.module('scopito.marketplace', ['ngRoute']);
->>>>>>> 23ff8cfd4f25696b8736d6af7b9f32756cebfa47
-
 app.config(['$routeProvider', function ($routeProvider) {
 $routeProvider
 // Home
@@ -51,16 +46,7 @@ app.directive('bsNavbar', function($location) {
 });
 */
 
-
-
-
-/** - Dialog code based on AngularJS Material demo
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that can be foundin the LICENSE file at http://material.angularjs.org/HEAD/license.
-**/
-
-
-app.controller('SearchCtrl', function ($scope , modalService/* , $mdDialog */) {
+app.controller('SearchCtrl', function ($scope , ModalService) {
 console.log("Search Controller reporting for duty.");
  //Loads grid view on startup AFTER the DOM is ready
  $scope.$on('$viewContentLoaded', function() {
@@ -68,49 +54,18 @@ console.log("Search Controller reporting for duty.");
     $scope.layout = "grid";
 
   });
-    /* Modal fiddling #2
-    ModalService.showModal({
-        templateUrl: "partials/search-modal.html",
-        controller: "ModalController"
-      }).then(function(modal) {
-
-        //it's a bootstrap element, use 'modal' to show it
-        modal.element.modal();
-        modal.close.then(function(result) {
-          console.log(result);
-        });
-      });
-      */
-    /* Modal fiddling
-    $scope.customFullscreen = false;
-
-    $scope.showModal = function(ev) {
-      // Appending dialog to document.body to cover sidenav in docs app
-      var modal = $mdDialog.confirm({
-        controller: ModalCtrl,
-        templateUrl: 'partials/search-modal.html',
-        parent: angular.element(document.body),
-        clickOutsideToClose: false,
-        fullscreen: $scope.customFullscreen
-      })
-
-      $mdDialog.show(modal);
-    };
-
-    function ModalCtrl($scope, $mdDialog) {
-      $scope.hide = function() {
-        $mdDialog.hide();
-      };
-
-      $scope.cancel = function() {
-        $mdDialog.cancel();
-      };
-
-      $scope.answer = function(answer) {
-        $mdDialog.hide(answer);
-      };
-    }
-    */
+    /* Modal */
+    $scope.show = function() {
+            ModalService.showModal({
+                templateUrl: 'partials/search-modal.html',
+                controller: "ModalController"
+            }).then(function(modal) {
+                modal.element.modal();
+                modal.close.then(function(result) {
+                    $scope.message = "You said " + result;
+                });
+            });
+        };
 
 });
 
@@ -130,17 +85,17 @@ interval: 5000
 // Activates Tooltips for Social Links
 $('.tooltip-social').tooltip({
 selector: "a[data-toggle=tooltip]"
-})
+});
 });
 
-/* Controls Modal Modal fiddling #2
+/* Controls Modal */
 
 app.controller('ModalController', function($scope, close) {
 
  $scope.close = function(result) {
  	close(result, 500); // close, but give 500ms for bootstrap to animate
  };
-}); */
+});
 
 
 
