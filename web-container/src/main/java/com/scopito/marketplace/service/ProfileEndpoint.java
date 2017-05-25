@@ -33,4 +33,5 @@ public class ProfileEndpoint {
     public Response getList() {
         return Response.ok(droneOperatorProfileBean.list(0, 5)).build();
     }
+
 }

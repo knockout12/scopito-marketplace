@@ -19,7 +19,7 @@ public class Services extends AbstractDao<ServicesEntity> {
     }
 
     public List<ServicesEntity> getServicesByID(long scopitoID) {
-        return getEntityManager().createNamedQuery("Services.findByID", ServicesEntity.class).setParameter("scopitoID", scopitoID).getResultList();
+        return getEntityManager().createNamedQuery("Services.findByID", ServicesEntity.class).setParameter("serviceID", scopitoID).getResultList();
     }
 
     public List<ServicesEntity> listRange(int pageCount, int pageSize) {
