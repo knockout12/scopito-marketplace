@@ -2,7 +2,7 @@ logger:
   level: INFO
 swarm:
   port:
-    offset: 21
+    offset: 23
   datasources:
     data-sources:
       MarketplaceDS:

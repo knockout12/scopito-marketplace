@@ -10,8 +10,8 @@
         <!--<class>com.scopito.marketplace.domainmodel.model.Status</class>-->
        <class>com.scopito.marketplace.domainmodel.model.DroneOperatorProfileEntity</class>
        <class>com.scopito.marketplace.domainmodel.model.ServicesEntity</class>
-       <!--<class>com.scopito.marketplace.domainmodel.model.Country</class>
        <class>com.scopito.marketplace.domainmodel.model.ServicesBacklogEntity</class>
+       <!--<class>com.scopito.marketplace.domainmodel.model.Country</class>
        <class>com.scopito.marketplace.domainmodel.model.Location</class>
        <class>com.scopito.marketplace.domainmodel.model.Region</class>
        <class>com.scopito.marketplace.domainmodel.model.Reviews</class>-->

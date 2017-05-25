@@ -7,6 +7,7 @@ import com.scopito.marketplace.domainmodel.model.ServicesBacklogEntity;
 import com.scopito.marketplace.domainmodel.model.ServicesEntity;
 import org.jboss.logging.Logger;
 import javax.inject.Inject;
+import java.util.ArrayList;
 import java.util.List;
 
 @Stateless
@@ -15,6 +16,9 @@ public class ServicesBean {
 
     @Inject
     private Services services;
+
+
+
 
     public Long countAll() {
         return services.count();
@@ -36,15 +40,43 @@ public class ServicesBean {
         return services.getEntityManager().createQuery("SELECT s FROM ServicesEntity s where s.scopitoID = :scopitoID", ServicesEntity.class)
                 .setParameter("scopitoID", scopitoID).getResultList();
     }
-/*
+
+    @Inject
     private ServicesBacklog servicesBacklog;
 
-
-    public List<ServicesBacklogEntity> listServices() {
+    public List<ServicesBacklogEntity> getServicesBacklog() {
         return servicesBacklog.getEntityManager().createQuery("SELECT s FROM ServicesBacklogEntity s", ServicesBacklogEntity.class).getResultList();
-
     }
-*/
+
+
+    public List<PresentableServices> getPresentableServicesListByID(long scopitoID)
+    {
+        List<ServicesBacklogEntity> listServiceBacklogEntity = new ArrayList<>(getServicesBacklog());
+
+        List<ServicesEntity> listServices = new ArrayList<>(getServicesByID(scopitoID));
+
+        List<PresentableServices> temp = new ArrayList<>();
+
+
+        for (ServicesEntity servicesEntity: listServices)
+        {
+            for (ServicesBacklogEntity servicesBacklogEntity: listServiceBacklogEntity)
+            {
+                if(servicesBacklogEntity.getServiceID() == servicesEntity.getServiceID() )
+                {
+                    temp.add(new PresentableServices(servicesEntity, servicesBacklogEntity));
+                   // listServiceBacklogEntity.remove(servicesBacklogEntity);
+                }
+                else {
+                    continue;
+                }
+
+            }
+
+        }
+        return temp;
+    }
+
 
 }
 

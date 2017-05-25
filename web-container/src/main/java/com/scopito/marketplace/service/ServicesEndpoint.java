@@ -33,4 +33,16 @@ public class ServicesEndpoint {
     public Response getServicesList() {
         return Response.ok(servicesBean.list(0, 5)).build();
     }
+
+    @GET
+    @Path("/presentable/{id}")
+    public Response getPresentableServicesByID(@PathParam("id") long scopitoID) {
+        logger.info(String.format("Requesting profile with scopito ID '%d'", scopitoID));
+        return Response.ok(servicesBean.getPresentableServicesListByID(scopitoID)).build();
+    }
+
+
+    @GET
+    @Path("/backlog")
+    public Response getBacklogList(){return Response.ok(servicesBean.getServicesBacklog()).build();}
 }
