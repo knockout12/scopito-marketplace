@@ -29,7 +29,19 @@
                 <a href="" id="list-btn" class="btn btn-primary btn-md" data-toggle="tooltip" title="List View" ng-class="{active: layout == 'list'}" ng-click="layout = 'list'" ><span class="glyphicon glyphicon-list"></span></a>
             </div>
         </div>
-        <div class="divider"></div> <!-- ng-init="showModal()" -->
+        <div class="divider"></div><!-- ng-init="showModal()" -->
+        <!-- Fucking around -->
+        <div class="panel panel-default" ng-controller="TestCtrl">
+            <div class="panel-heading">
+                <button class="btn btn-success" ng-click="refreshList()">Refresh dashboard list</button>
+            </div>
+            <div class="panel-body">
+                <div ng-repeat="item in items track by item.scopitoID">
+                    {{item.scopitoID}} - {{item.companyName}} - {{item.email}}
+                </div>
+            </div>
+        </div>
+        <!-- fucking around end -->
         <!-- Grid and List View -->
             <div ng-show="layout == 'grid'">
                 <div ng-include="'partials/search-grid.html'"></div>

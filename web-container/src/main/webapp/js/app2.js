@@ -45,6 +45,30 @@ app.directive('bsNavbar', function($location) {
   };
 });
 */
+/* Services */
+app.service('ProfileService', ['$http', function($http) {
+    var whatever = {};
+
+    whatever.listAll = function() {
+        return $http.get('/service/profile/list');
+    };
+
+    whatever.get = function(scopitoID) {
+        return $http.get('/service/profile/'+scopitoID);
+    };
+
+    return whatever;
+}]);
+
+app.controller('TestCtrl', ['$scope', 'ProfileService', function($scope, ProfileService) {
+    $scope.items = [];
+
+    $scope.refreshList = function() {
+        ProfileService.listAll().then(function(response) {
+            $scope.items = response.data;
+        });
+    };
+}]);
 
 app.controller('SearchCtrl', function ($scope , ModalService) {
 console.log("Search Controller reporting for duty.");
@@ -66,6 +90,16 @@ console.log("Search Controller reporting for duty.");
                 });
             });
         };
+/*
+       $scope.items = [];
+
+           $scope.refreshList = function() {
+               ProfileService.listAll().then(function(response) {
+                   $scope.items = response.data;
+               });
+           };
+           */
+
 
 });
 
@@ -96,6 +130,8 @@ app.controller('ModalController', function($scope, close) {
  	close(result, 500); // close, but give 500ms for bootstrap to animate
  };
 });
+
+
 
 
 
