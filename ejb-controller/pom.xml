@@ -11,7 +11,7 @@
         <relativePath>../</relativePath>
     </parent>
 
-    <artifactId>ejb-dashboard</artifactId>
+    <artifactId>ejb-controller</artifactId>
     <packaging>ejb</packaging>
 
     <dependencies>

@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 var app = angular.module('scopito.marketplace', ['ngRoute' , 'angular-lightbox' ,/* 'angularModalService'  , 'ngMaterial' , 'ngMessages' , 'material.svgAssetsCache' */ ]); /* Dependencies for fiddles */
+=======
+//The ngRoute module provides routing and deeplinking services and directives for AngularJS apps.
+var app = angular.module('scopito.marketplace', ['ngRoute']);
+>>>>>>> 23ff8cfd4f25696b8736d6af7b9f32756cebfa47
 
 app.config(['$routeProvider', function ($routeProvider) {
 $routeProvider

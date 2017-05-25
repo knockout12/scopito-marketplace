@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/domain-model/domain-model.iml" filepath="$PROJECT_DIR$/domain-model/domain-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ejb-controller/ejb-controller.iml" filepath="$PROJECT_DIR$/ejb-controller/ejb-controller.iml" />
       <module fileurl="file://$PROJECT_DIR$/ejb-dashboard/ejb-dashboard.iml" filepath="$PROJECT_DIR$/ejb-dashboard/ejb-dashboard.iml" />
       <module fileurl="file://$PROJECT_DIR$/ejb-dashboard/src/main/main.iml" filepath="$PROJECT_DIR$/ejb-dashboard/src/main/main.iml" />
       <module fileurl="file://D:\Thomas BackUp\10 Semester\ICT Bachelor\ICT_Website_Work\ICT_Bachelor_WebsiteV2\web-container\src\main\main1.iml" filepath="D:\Thomas BackUp\10 Semester\ICT Bachelor\ICT_Website_Work\ICT_Bachelor_WebsiteV2\web-container\src\main\main1.iml" />

@@ -25,10 +25,6 @@ public class DashboardBean {
     }
 
     public boolean create(String name) {
-        if(name == null || name.isEmpty()) {
-            return false;
-        }
-
         final StatusEntity statusEntity = new StatusEntity();
         statusEntity.setName(name);
 

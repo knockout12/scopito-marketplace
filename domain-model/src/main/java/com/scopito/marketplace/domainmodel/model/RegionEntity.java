@@ -1,23 +1,36 @@
 package com.scopito.marketplace.domainmodel.model;
 
-/**
- * Created by SagiAlagem on 10/05/2017.
- */
-public class Region {
+import javax.persistence.*;
+
+@Entity
+@Table(name = "Region")
+@NamedQueries({
+        @NamedQuery(name ="Region.findAll", query = "SELECT s FROM Region")
+})
+public class RegionEntity {
 
     private int regionID;
     private String regionName;
     private int countryID;
 
+    @Id
+    @Column(name = "regionID")
     public int getRegionID() {
         return regionID;
     }
-
-    public String getRegionName() {
-        return regionName;
+    public void setRegionID(int regionID) {
+        this.regionID = regionID;
     }
 
+    @Column(columnDefinition = "regionName", name = "regionName")
+    public String getRegionName() {return this.regionName; }
+    public void setRegionName(String regionName) { this.regionName = regionName;}
+
+    @Column(name = "countryID")
     public int getCountryID() {
         return countryID;
+    }
+    public void setCountryID(int countryID) {
+        this.countryID = countryID;
     }
 }

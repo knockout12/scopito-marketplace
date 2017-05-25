@@ -18,7 +18,7 @@
         <!-- EJB dependencies -->
         <dependency>
             <groupId>com.scopito.marketplace</groupId>
-            <artifactId>ejb-dashboard</artifactId>
+            <artifactId>ejb-controller</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
 
