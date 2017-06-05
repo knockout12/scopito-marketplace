@@ -6,8 +6,13 @@ import javax.persistence.*;
 @Table(name = "DroneOperatorProfile")
 @NamedQueries({
         @NamedQuery(name="DroneOperatorProfile.findByID", query = "SELECT s FROM DroneOperatorProfileEntity s where s.scopitoID = :scopitoID"),
-        @NamedQuery(name ="DroneOperatorProfile.findAll", query = "SELECT s FROM DroneOperatorProfileEntity s")
+        @NamedQuery(name ="DroneOperatorProfile.findAll", query = "SELECT s FROM DroneOperatorProfileEntity s"),
+        @NamedQuery(name ="DroneOperatorProfile.updateCompanyName", query = "UPDATE DroneOperatorProfileEntity d SET d.companyName = :companyName WHERE d.scopitoID = :scopitoID"),
+        @NamedQuery(name ="DroneOperatorProfile.updateEmail", query = "UPDATE DroneOperatorProfileEntity p SET p.email = :email WHERE p.scopitoID = :scopitoID"),
+        @NamedQuery(name ="DroneOperatorProfile.updatePhoneNumber", query = "UPDATE DroneOperatorProfileEntity p SET p.phoneNumber = :phoneNumber WHERE p.scopitoID = :scopitoID")
+
 })
+
 public class DroneOperatorProfileEntity {
     private long scopitoID;
     private Boolean published;
@@ -17,32 +22,59 @@ public class DroneOperatorProfileEntity {
     private String phoneNumber;
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "scopitoID")
     public long getScopitoID() {
         return scopitoID;
     }
+
     public void setScopitoID(long scopitoID) {
         this.scopitoID = scopitoID;
     }
 
     @Column(name = "published")
-    public Boolean isPublished() {return this.published; }
-    public void setPublished(Boolean published) { this.published = published;}
+    public Boolean isPublished() {
+        return this.published;
+    }
+
+    public void setPublished(Boolean published) {
+        this.published = published;
+    }
 
     @Column(name = "companyName")
-    public String getCompanyName() {return this.companyName; }
-    public void setCompanyName(String companyName) { this.companyName = companyName;}
+    public String getCompanyName() {
+        return this.companyName;
+    }
+
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
+    }
 
     @Column(name = "scopitoCertified")
-    public Boolean isScopitoCertified() {return this.scopitoCertified; }
-    public void setScopitoCertified(Boolean certified) { this.scopitoCertified = certified;}
+    public Boolean isScopitoCertified() {
+        return this.scopitoCertified;
+    }
+
+    public void setScopitoCertified(Boolean certified) {
+        this.scopitoCertified = certified;
+    }
 
     @Column(name = "email")
-    public String getEmail() {return this.email;}
-    public void setEmail(String email) { this.email = email;}
+    public String getEmail() {
+        return this.email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     @Column(name = "phoneNumber")
-    public String getPhoneNumber() {return this.phoneNumber;}
-    public void setPhoneNumber(String phoneNumber) { this.phoneNumber = phoneNumber;}
+    public String getPhoneNumber() {
+        return this.phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
 }

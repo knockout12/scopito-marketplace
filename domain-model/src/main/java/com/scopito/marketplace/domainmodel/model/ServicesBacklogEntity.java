@@ -2,34 +2,35 @@ package com.scopito.marketplace.domainmodel.model;
 
 import javax.persistence.*;
 
-/**
- * Created by SagiAlagem on 15/05/2017.
- */
+
 @Entity
-@Table(name = "ServiceBacklog")
+@Table(name = "ServicesBacklog")
 @NamedQueries({
-        @NamedQuery(name="ServiceBacklog.findAll", query = "SELECT s FROM ServiceBacklog")
+        @NamedQuery(name="ServicesBacklog.findAll", query = "SELECT s FROM ServicesBacklogEntity s ")
 })
 public class ServicesBacklogEntity{
 
     private int serviceID;
     private String serviceName;
-    private String description;
+  //  private String description;
 
 
     @Id
-    @Column(columnDefinition = "serviceID", name = "serviceID")
+    @Column(name = "serviceID")
     public int getServiceID() {return this.serviceID; }
     public void setServiceID(int serviceID) { this.serviceID = serviceID;}
 
-    @Column(columnDefinition = "serviceName", name = "serviceName")
+    @Column(name = "serviceName")
     public String getServiceName() {return this.serviceName; }
     public void setServiceName(String serviceName) { this.serviceName = serviceName;}
 
-
-    @Column(columnDefinition = "description", name = "description")
-    public String getDescription() {return this.description; }
-    public void setDescription(String description) { this.description = description;}
+    /**
+     * Future feature. To provide future capabilities for users to give short description on their service
+     * @return String description
+     */
+    //@Column(name = "description")
+    //public String getDescription() {return this.description; }
+    //public void setDescription(String description) { this.description = description;}
 
 }
 
